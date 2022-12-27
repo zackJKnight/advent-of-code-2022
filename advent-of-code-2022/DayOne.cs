@@ -22,13 +22,13 @@ public static class DayOne
     
         }
 // day 1 part 1 answer:
-// Console.WriteLine(elves.Max());
+ Console.WriteLine($"day one - part one: {elves.Max()}");
 
 // day 1 part 2:
         elves.Sort();
         elves.Reverse();
         var top3 = elves.Take(3);
-        Console.WriteLine(top3.Sum());
+        Console.WriteLine($"day one - part two: {top3.Sum()}");
         //208180 correct
     }
 }

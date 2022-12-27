@@ -58,7 +58,7 @@ public static class DayTwo
             }
             
         }
-        Console.WriteLine(score);
+        Console.WriteLine($"day two - part one: {score}");
         // 15623 - too high
         // 8933 correct
     }
@@ -92,7 +92,7 @@ public static class DayTwo
                 continue;
             }
         }
-        Console.WriteLine(score);
+        Console.WriteLine($"day two - part two: {score}");
         // 11998 correct
     }
 }

@@ -6,3 +6,6 @@ DayOne.Solve();
 DayTwo.SolvePartOne();
 DayTwo.SolvePartTwo();
 DayThree.SolvePartOne();
+DayThree.SolvePartTwo();
+DayFour.SolvePartOne();
+DayFour.SolvePartTwo();

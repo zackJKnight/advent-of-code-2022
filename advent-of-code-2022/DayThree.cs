@@ -18,7 +18,17 @@ public static class DayThree
             var match = secondHalf.ToCharArray()?.FirstOrDefault(item => firstHalf.ToCharArray().Contains(item));
             // if uppercase, subtract 38
             // observed value for lowercase a
-            var charNumber = (int)match;
+            var charNumber = getCodeForChar(match);
+            score += charNumber;
+            
+        }
+        Console.WriteLine($"day three - part one: {score}");
+        // too high 27513
+        // correct 8515
+    }
+static int getCodeForChar(char? match)
+{
+    var charNumber = (int)match;
             if (charNumber < 97)
             {
                 charNumber -= 38;
@@ -27,22 +37,17 @@ public static class DayThree
             {
                 charNumber -= 96;
             }
-
-            score += charNumber;
-            
-        }
-        Console.WriteLine(score);
-        // too high 27513
-        // correct 8515
-    }
-
+            return charNumber;
+}
     public static void SolvePartTwo()
     {
         var score = 0;
-        foreach (var line in input())
+        foreach (var group in input().Chunk(3))
         {
-            
+            var matches = group.First().ToCharArray()?.Where(item => group.Last().ToCharArray().Contains(item));
+            var match = matches?.FirstOrDefault(item => group.Skip(1).First().ToCharArray().Contains(item));
+score += getCodeForChar(match);
         }
-        Console.WriteLine(score);
+        Console.WriteLine($"day three - part two: {score}");
     }
 }
